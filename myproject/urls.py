@@ -18,5 +18,8 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'mysite/', include('apps.myapp.urls', namespace='my')),
+    # DeprecationWarning
+    # url(r'mysite/', include('apps.myapp.urls', namespace="my")),
+    # OK
+    url(r'mysite/', include(('apps.myapp.urls', 'my'),)),
 ]
