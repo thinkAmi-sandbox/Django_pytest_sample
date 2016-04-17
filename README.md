@@ -1,0 +1,1 @@
+# Django_pytest_sample
